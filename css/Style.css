@@ -1,0 +1,13 @@
+.slide {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.slide img {
+	height: 50vh;
+}
+body{
+	background-image: url("../img/palette.png");
+}
+.btn-success{
+	margin-bottom: 20px;
+}
