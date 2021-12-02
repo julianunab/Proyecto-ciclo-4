@@ -11,3 +11,9 @@ body{
 .btn-success{
 	margin-bottom: 20px;
 }
+.alert{
+	background: -webkit-linear-gradient(left,#03873c 20%,#fff 100%);
+	background: linear-gradient(to right,#03873c 20%,#fff 100%);
+	width: 50%;
+	border: none;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>prueba</title>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/Style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+<script src="js/bootstrap.min.js"></script>
+<script src="js/popper.min.js"></script>
+
+</head>
+<body>
+<div class=".container-fluid">
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="img/LOGO ENERGIAS.png" width="100">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+        <li class="nav-item align-text-top">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nuestro Cluster</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Directorio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Registrar Empresa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">Inicio de sesion</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/carrete01.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/carrete02.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/carrete03.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+ </div>
+ <div class="container-sm">
+<div class="alert alert-light text-light fw-bold fs-3 p-2" role="alert">
+  Registro de empresas
+</div>
+<div class="card border-success mb-3" style="max-width: 80rem;">
+    <div class="card-body text-success">
+      <div class="row g-3 p-3">
+  <div class="col">
+    <input type="text" class="form-control" placeholder="Correo o usuario" aria-label="Correo o usuario">
+  </div>
+  <div class="col">
+    <input type="text" class="form-control" placeholder="Razón social" aria-label="Razón social">
+  </div>
+</div>
+      <div class="row g-3 p-3">
+  <div class="col-sm">
+    <input type="text" class="form-control" placeholder="Contraseña" aria-label="Contraseña">
+  </div>
+  <div class="col-sm">
+    <input type="text" class="form-control" placeholder="Nit" aria-label="Nit">
+  </div>
+  <div class="col-sm">
+    <input type="text" class="form-control" placeholder="Mercado objetivo" aria-label="Mercado objetivo">
+  </div>
+</div>
+<div class="row g-3 p-3">
+  <div class="col-sm">
+    <input type="text" class="form-control" placeholder="Representante legal" aria-label="Representante legal">
+  </div>
+  <div class="col-sm">
+    <input type="text" class="form-control" placeholder="Tipo de empresa" aria-label="Tipo de empresa">
+  </div>
+  <div class="col-sm">
+    <input type="text" class="form-control" placeholder="Sector empresarial" aria-label="Sector empresarial">
+  </div>
+</div>
+<div class="row g-3 p-3">
+  <div class="col-sm">
+    <input type="text" class="form-control" placeholder="Telefono" aria-label="Telefono">
+  </div>
+  <div class="col-sm">
+    <input type="text" class="form-control" placeholder="Departamento" aria-label="Departamento">
+  </div>
+  <div class="col-sm">
+    <input type="text" class="form-control" placeholder="Categoria" aria-label="Categoria">
+  </div>
+</div>
+<div class="row g-3 p-3">
+  <div class="col-sm">
+    <input type="text" class="form-control" placeholder="Direccion" aria-label="Direccion">
+  </div>
+  <div class="col-sm">
+    <input type="text" class="form-control" placeholder="Municipio" aria-label="Municipio">
+  </div>
+  <div class="col-sm">
+  <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Estoy de acuerdo con los terminos y condiciones</label>
+  </div>
+  </div>
+</div>
+  </div> 
+</div>
+</div>
+</div>
+<div id="footer" class="p-2 text-light fw-bold">
+<div class="container bg-success">
+ <div class="row justify-content-md-center py-5">
+   <div class="col text-center font-weight-light">
+     <p>Correo </p>
+     <p><i class="bi bi-envelope"> clusterenergiarenovableoilygas@gmail.com</p></i>
+   </div>
+ </div> 
+</div> 
+</div>
+<img style="display:scroll;
+position:fixed; bottom:20px; right:20px;"
+src="img/LOGO ENERGIAS.png" width="150" />
+</body>
+</html>
