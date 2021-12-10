@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Contacto = () => {
+const Directorio = () => {
     return (
         <div>
            <table class="table table-hover">
@@ -36,4 +36,4 @@ const Contacto = () => {
     )
 }
 
-export default Contacto
+export default Directorio

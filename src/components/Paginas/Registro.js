@@ -1,5 +1,5 @@
 import React from 'react'
-const Nosotros = () => {
+const Registro = () => {
     return (
         <div>
         <table class="table table-hover">
@@ -35,4 +35,4 @@ const Nosotros = () => {
     )
 }
 
-export default Nosotros
+export default Registro

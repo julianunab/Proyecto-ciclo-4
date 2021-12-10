@@ -19,10 +19,10 @@ const Navbar = () => {
                 <Link className="nav-link" to='/'>Nuestro Cluster</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link" to='/Contacto'>Directorio</Link>
+                <Link className="nav-link" to='/Directorio'>Directorio</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link" to='/Nosotros'>Registrar Empresa</Link>
+                <Link className="nav-link" to='/Registro'>Registrar Empresa</Link>
                 </li>    
             </ul>
             </div>
