@@ -46,7 +46,24 @@ const Registro = () => {
                 <input type="text" class="form-control" placeholder="Departamento" aria-label="Departamento" />
               </div>
               <div class="col-sm">
-                <input type="text" class="form-control" placeholder="Categoria" aria-label="Categoria" />
+                <select class="form-select" aria-label="Categoria">
+                <option selected>Categoria</option>
+                <option value="1">Transporte de carga</option>
+                <option value="2">Montajes electricos</option>
+                <option value="3">Laboratorios y analisis tecnicos</option>
+                <option value="4">Servicios de consultoria</option>
+                <option value="5">Servicios ambientales</option>
+                <option value="6">Montajes metalmecanicos</option>
+                <option value="7">Obras civiles</option>
+                <option value="8">Catering</option>
+                <option value="9">Suministros</option>
+                <option value="10">Servicios de salud</option>
+                <option value="11">Otros transportes</option>
+                <option value="12">Servicios TIC</option>
+                <option value="13">Servicios generales y mantenimiento</option>
+                <option value="14">Energia eolica</option>
+                <option value="15">Energia Solar</option>
+                </select>
               </div>
             </div>
             <div class="row g-3 p-3">

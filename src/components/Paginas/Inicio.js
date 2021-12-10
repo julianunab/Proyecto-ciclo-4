@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Link, Routes } from "react-router-dom";
-
 const inicio = () => {
     return (
         <div>
@@ -27,7 +26,7 @@ const inicio = () => {
                 </div>
                 <h5 class="card-title text-center fw-bold">HAZ PARTE DE ESTA GRAN INICIATIVA</h5>
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-success" type="button">REGISTRA TU EMPRESA</button>
+                 <a href="/Registro" button class="btn btn-success" type="button">REGISTRA TU EMPRESA</a>
                 </div>
                 <div class="card mb-3 p-2">
                     <div class="card-body text-success">
