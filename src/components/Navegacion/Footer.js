@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link, Routes } from "react-rout
 const Footer = () => {
     return (
     <div>
-        <div id="footer" class="p-5 text-light fw-boldgr4ghb">
+        <div id="footer" class="p-3 text-light fw-boldgr4ghb">
         <div class="container bg-success">
         <div class="row justify-content-md-center py-5">
         <div class="col text-center font-weight-light">
