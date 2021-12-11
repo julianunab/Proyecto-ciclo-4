@@ -6,14 +6,13 @@ import {
   Link
 } from "react-router-dom";
 import Inicio from './components/Paginas/Inicio';
-import Contacto from './components/Paginas/Directorio';
-import Nosotros from './components/Paginas/Registro';
 import Navbar from './components/Navegacion/Navbar';
 import Carousel from './components/Navegacion/Carousel';
 import Directorio from "./components/Paginas/Directorio";
 import Registro from "./components/Paginas/Registro";
 import Footer from "./components/Navegacion/Footer";
-
+import Noticias from "./components/Paginas/Noticias";
+import Post from "./components/Paginas/Post";
 
 function App() {
   return (
@@ -24,6 +23,12 @@ function App() {
         <Switch>
           <Route path="/Directorio">
             <Directorio />
+          </Route>
+          <Route path="/Noticias">
+            <Noticias />
+          </Route>
+          <Route path="/Post">
+            <Post />
           </Route>
           <Route path="/Registro">
             <Registro />
