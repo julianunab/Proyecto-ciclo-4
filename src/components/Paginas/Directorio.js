@@ -1,6 +1,21 @@
-import React from 'react'
+import React, {useEffect , useState} from 'react';
+import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route, Link, Routes } from "react-router-dom";
 const Directorio = () => {
+  const baseURL="http://localhost:8080/empresa"
+  const [data , setData] = useState([])
+
+  const peticionGet = async () => {
+          await axios.get(baseURL,{ mode: 'cors'})
+          .then(response=>{
+            setData(response.data);
+          }).catch(error=>{
+            console.log(error)
+          })}
+         useEffect(() =>{
+      peticionGet();
+      },[setData]);
+
   return (
     <div>
       <div class="container-sm">
@@ -35,6 +50,28 @@ const Directorio = () => {
                 <button type="button" class="btn btn-success">Buscar</button>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="card border-success mb-3">
+          <div class="card-body text-success">
+            <table className="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Razon Social</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  data.map((empresa) => (
+                    <tr key={empresa.id}>
+                      <td>{empresa.id}</td>
+                      <td>{empresa.razonSocial}</td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
