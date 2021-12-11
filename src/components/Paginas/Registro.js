@@ -5,6 +5,19 @@ const Registro = () => {
   const [datos, setDatos] = useState({
     nombre: '',
     razon: '',
+    contraseña: '',
+    nit: '',
+    mercadoObjetivo: '',
+    representantelegal: '',
+    tipo:'',
+    sector:'',
+    telefono:'',
+    municipio:'',
+    direccion:'',
+    departamento:'',
+    categoria:'',
+
+
   })
 
   const handleInputChange = (event) => {
@@ -17,7 +30,7 @@ const Registro = () => {
 
   const enviarDatos = (event) => {
     event.preventDefault();
-    console.log(datos.nombre + ' ' + datos.razon)
+    console.log(datos.nombre + ' ' + datos.razon + datos.contraseña)
   }
 
   return (
@@ -28,10 +41,13 @@ const Registro = () => {
         </div>
 
         <div className="card border-success mb-3">
-          <form onSubmit={enviarDatos}>
+        <form onSubmit={enviarDatos}>
           <div className="card-body text-success">
             <div className="row g-3 p-3">
+              
               <div className="col">
+              
+
                 <input type="text" name="nombre" className="form-control" placeholder="Correo o usuario" aria-label="Correo o usuario" onChange={handleInputChange}/>
       
               </div>
@@ -41,60 +57,59 @@ const Registro = () => {
             </div>
             <div className="row g-3 p-3">
               <div className="col-sm">
-                <input type="text" className="form-control" placeholder="Contraseña" aria-label="Contraseña" />
+                <input type="text" type="password" name="contraseña" className="form-control" placeholder="Contraseña" aria-label="Contraseña" onChange={handleInputChange}/>
               </div>
               <div className="col-sm">
-                <input type="text" className="form-control" placeholder="Nit" aria-label="Nit" />
+                <input type="text" name="nit" className="form-control" placeholder="Nit" aria-label="Nit" onChange={handleInputChange}/>
               </div>
               <div className="col-sm">
-                <input type="text" className="form-control" placeholder="Mercado objetivo" aria-label="Mercado objetivo" />
-              </div>
-            </div>
-            <div className="row g-3 p-3">
-              <div className="col-sm">
-                <input type="text" className="form-control" placeholder="Representante legal" aria-label="Representante legal" />
-              </div>
-              <div className="col-sm">
-                <input type="text" className="form-control" placeholder="Tipo de empresa" aria-label="Tipo de empresa" />
-              </div>
-              <div className="col-sm">
-                <input type="text" className="form-control" placeholder="Sector empresarial" aria-label="Sector empresarial" />
+                <input type="text" name="mercadoObjetivo" className="form-control" placeholder="Mercado objetivo" aria-label="Mercado objetivo" onChange={handleInputChange}/>
               </div>
             </div>
             <div className="row g-3 p-3">
               <div className="col-sm">
-                <input type="text" className="form-control" placeholder="Telefono" aria-label="Telefono" />
+                <input type="text" name="representantelegal" className="form-control" placeholder="Representante legal" aria-label="Representante legal" onChange={handleInputChange}/>
               </div>
               <div className="col-sm">
-                <input type="text" className="form-control" placeholder="Departamento" aria-label="Departamento" />
+                <input type="text" name="tipo" className="form-control" placeholder="Tipo de empresa" aria-label="Tipo de empresa" onChange={handleInputChange}/>
               </div>
               <div className="col-sm">
-                <select className="form-select" aria-label="Categoria">
+                <input type="text" name="sector" className="form-control" placeholder="Sector empresarial" aria-label="Sector empresarial" onChange={handleInputChange}/>
+              </div>
+            </div>
+            <div className="row g-3 p-3">
+              <div className="col-sm">
+                <input type="text" name="telefono" className="form-control" placeholder="Telefono" aria-label="Telefono" onChange={handleInputChange}/>
+              </div>
+              <div className="col-sm">
+                <input type="text" name="departamento" className="form-control" placeholder="Departamento" aria-label="Departamento" onChange={handleInputChange}/>
+              </div>
+              <div className="col-sm">
+                <select className="form-select" name="categoria" aria-label="Categoria" onChange={handleInputChange}>
                 <option selected>Categoria</option>
-                <option value="1">Transporte de carga</option>
-                <option value="2">Montajes electricos</option>
-                <option value="3">Laboratorios y analisis tecnicos</option>
-                <option value="4">Servicios de consultoria</option>
-                <option value="5">Servicios ambientales</option>
-                <option value="6">Montajes metalmecanicos</option>
-                <option value="7">Obras civiles</option>
-                <option value="8">Catering</option>
-                <option value="9">Suministros</option>
-                <option value="10">Servicios de salud</option>
-                <option value="11">Otros transportes</option>
-                <option value="12">Servicios TIC</option>
-                <option value="13">Servicios generales y mantenimiento</option>
-                <option value="14">Energia eolica</option>
-                <option value="15">Energia Solar</option>
+                <option>Montajes electricos</option>
+                <option>Laboratorios y analisis tecnicos</option>
+                <option>Servicios de consultoria</option>
+                <option>Servicios ambientales</option>
+                <option>Montajes metalmecanicos</option>
+                <option>Obras civiles</option>
+                <option>Catering</option>
+                <option>Suministros</option>
+                <option>Servicios de salud</option>
+                <option>Otros transportes</option>
+                <option>Servicios TIC</option>
+                <option>Servicios generales y mantenimiento</option>
+                <option>Energia eolica</option>
+                <option>Energia Solar</option>
                 </select>
               </div>
             </div>
             <div className="row g-3 p-3">
               <div className="col-sm">
-                <input type="text" className="form-control" placeholder="Direccion" aria-label="Direccion" />
+                <input type="text" name="direccion" className="form-control" placeholder="Direccion" aria-label="Direccion" onChange={handleInputChange}/>
               </div>
               <div className="col-sm">
-                <input type="text" className="form-control" placeholder="Municipio" aria-label="Municipio" />
+                <input type="text" name="municipio" className="form-control" placeholder="Municipio" aria-label="Municipio" onChange={handleInputChange}/>
               </div>
               <div className="col-sm">
                 <div className="form-check form-switch">
@@ -104,11 +119,13 @@ const Registro = () => {
               </div>
             </div>
           </div>
-          </form>
-        </div>
-        <div className="d-grid gap-2 col-6 mx-auto">
+          <div className="d-grid gap-2 col-6 mx-auto">
           <button className="btn btn-success" type="submit">Guardar</button>
         </div>
+        </form>
+        </div>
+        
+        
       </div>
     </div>
   )
