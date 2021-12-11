@@ -56,8 +56,8 @@ const Registro = () => {
   }
   return (
     <div>
-      <div class="container-sm">
-        <div class="alert alert-light text-light fw-bold fs-3 p-2" role="alert">
+      <div className="container-sm">
+        <div className="alert alert-light text-light fw-bold fs-3 p-2" role="alert">
           Registro de empresas
         </div>
         <Form onSubmit={handleSubmit}>
