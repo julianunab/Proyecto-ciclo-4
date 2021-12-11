@@ -1,52 +1,75 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 const Registro = () => {
+ 
+  const [datos, setDatos] = useState({
+    nombre: '',
+    razon: '',
+  })
+
+  const handleInputChange = (event) => {
+    //console.log(event.target.value)
+    setDatos({
+      ...datos,
+      [event.target.name] : event.target.value
+    })
+  }
+
+  const enviarDatos = (event) => {
+    event.preventDefault();
+    console.log(datos.nombre + ' ' + datos.razon)
+  }
+
   return (
     <div>
-      <div class="container-sm">
-        <div class="alert alert-light text-light fw-bold fs-3 p-2" role="alert">
+      <div className="container-sm">
+        <div className="alert alert-light text-light fw-bold fs-3 p-2" role="alert">
           Registro de empresas
         </div>
-        <div class="card border-success mb-3">
-          <div class="card-body text-success">
-            <div class="row g-3 p-3">
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Correo o usuario" aria-label="Correo o usuario" />
+
+        <div className="card border-success mb-3">
+          <form onSubmit={enviarDatos}>
+          <div className="card-body text-success">
+            <div className="row g-3 p-3">
+              <div className="col">
+                <input type="text" name="nombre" className="form-control" placeholder="Correo o usuario" aria-label="Correo o usuario" onChange={handleInputChange}/>
+      
               </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Razón social" aria-label="Razón social" />
-              </div>
-            </div>
-            <div class="row g-3 p-3">
-              <div class="col-sm">
-                <input type="text" class="form-control" placeholder="Contraseña" aria-label="Contraseña" />
-              </div>
-              <div class="col-sm">
-                <input type="text" class="form-control" placeholder="Nit" aria-label="Nit" />
-              </div>
-              <div class="col-sm">
-                <input type="text" class="form-control" placeholder="Mercado objetivo" aria-label="Mercado objetivo" />
+              <div className="col">
+                <input type="text" name="razon" className="form-control" placeholder="Razón social" aria-label="Razón social" onChange={handleInputChange}/>
               </div>
             </div>
-            <div class="row g-3 p-3">
-              <div class="col-sm">
-                <input type="text" class="form-control" placeholder="Representante legal" aria-label="Representante legal" />
+            <div className="row g-3 p-3">
+              <div className="col-sm">
+                <input type="text" className="form-control" placeholder="Contraseña" aria-label="Contraseña" />
               </div>
-              <div class="col-sm">
-                <input type="text" class="form-control" placeholder="Tipo de empresa" aria-label="Tipo de empresa" />
+              <div className="col-sm">
+                <input type="text" className="form-control" placeholder="Nit" aria-label="Nit" />
               </div>
-              <div class="col-sm">
-                <input type="text" class="form-control" placeholder="Sector empresarial" aria-label="Sector empresarial" />
+              <div className="col-sm">
+                <input type="text" className="form-control" placeholder="Mercado objetivo" aria-label="Mercado objetivo" />
               </div>
             </div>
-            <div class="row g-3 p-3">
-              <div class="col-sm">
-                <input type="text" class="form-control" placeholder="Telefono" aria-label="Telefono" />
+            <div className="row g-3 p-3">
+              <div className="col-sm">
+                <input type="text" className="form-control" placeholder="Representante legal" aria-label="Representante legal" />
               </div>
-              <div class="col-sm">
-                <input type="text" class="form-control" placeholder="Departamento" aria-label="Departamento" />
+              <div className="col-sm">
+                <input type="text" className="form-control" placeholder="Tipo de empresa" aria-label="Tipo de empresa" />
               </div>
-              <div class="col-sm">
-                <select class="form-select" aria-label="Categoria">
+              <div className="col-sm">
+                <input type="text" className="form-control" placeholder="Sector empresarial" aria-label="Sector empresarial" />
+              </div>
+            </div>
+            <div className="row g-3 p-3">
+              <div className="col-sm">
+                <input type="text" className="form-control" placeholder="Telefono" aria-label="Telefono" />
+              </div>
+              <div className="col-sm">
+                <input type="text" className="form-control" placeholder="Departamento" aria-label="Departamento" />
+              </div>
+              <div className="col-sm">
+                <select className="form-select" aria-label="Categoria">
                 <option selected>Categoria</option>
                 <option value="1">Transporte de carga</option>
                 <option value="2">Montajes electricos</option>
@@ -66,24 +89,25 @@ const Registro = () => {
                 </select>
               </div>
             </div>
-            <div class="row g-3 p-3">
-              <div class="col-sm">
-                <input type="text" class="form-control" placeholder="Direccion" aria-label="Direccion" />
+            <div className="row g-3 p-3">
+              <div className="col-sm">
+                <input type="text" className="form-control" placeholder="Direccion" aria-label="Direccion" />
               </div>
-              <div class="col-sm">
-                <input type="text" class="form-control" placeholder="Municipio" aria-label="Municipio" />
+              <div className="col-sm">
+                <input type="text" className="form-control" placeholder="Municipio" aria-label="Municipio" />
               </div>
-              <div class="col-sm">
-                <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-                  <label class="form-check-label" for="flexSwitchCheckDefault">Estoy de acuerdo con los terminos y condiciones</label>
+              <div className="col-sm">
+                <div className="form-check form-switch">
+                  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                  <label className="form-check-label" for="flexSwitchCheckDefault">Estoy de acuerdo con los terminos y condiciones</label>
                 </div>
               </div>
             </div>
           </div>
+          </form>
         </div>
-        <div class="d-grid gap-2 col-6 mx-auto">
-          <button class="btn btn-success" type="button">Guardar</button>
+        <div className="d-grid gap-2 col-6 mx-auto">
+          <button className="btn btn-success" type="submit">Guardar</button>
         </div>
       </div>
     </div>
